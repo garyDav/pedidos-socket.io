@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  margin: 32px auto;
+  width: 90%;
+}
+
+.list-item {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+  grid-gap: 15px;
+}
+
+.item {
+  background-color: darkgray;
+  display: grid;
+  grid-template: 70px / 210px 1fr 70px;
+  grid-gap: 10px;
+  grid-template-areas: "badge title action"
+                       "badge detail action";
+  border-radius: 10px;
+}
+
+.badge {
+  grid-area: badge;
+}
+
+.badge figure {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.badge figure img {
+  width: 100%;
+  vertical-align: top;
+}
+
+.title {
+  grid-area: title;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail {
+  grid-area: detail;
+  background-color: burlywood;
+  padding: 15px 10px;
+}
+.detail p {
+  margin: 0;
+}
+
+.action {
+  grid-area: action;
+  background-color: tomato;
+}
+
+
+@media screen and (max-width: 650px) {
+  .list-item {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  .item {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    grid-template-areas: "title title"
+                         "badge action"
+                         "badge detail";
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .item {
+    grid-template-rows: auto;
+    grid-template-areas: "action action"
+                         "badge badge"
+                         "badge badge"
+                         "title title"
+                         "detail detail";
+  }
+}

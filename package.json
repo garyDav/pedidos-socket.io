@@ -1,0 +1,30 @@
+{
+  "name": "pedidos-socket.io",
+  "version": "0.0.1",
+  "description": "Orders for a restaurant, module: waiter, cashier, kitchen",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garyDav/pedidos-socket.io.git"
+  },
+  "keywords": [
+    "socket.IO",
+    "waiter",
+    "cashier",
+    "kitchen",
+    "restaurant"
+  ],
+  "author": "Gary Guzman <gary.2810.dav@gmail.com> (https://twitter.com/_garyDav)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/garyDav/pedidos-socket.io/issues"
+  },
+  "homepage": "https://github.com/garyDav/pedidos-socket.io#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.1.1"
+  }
+}
